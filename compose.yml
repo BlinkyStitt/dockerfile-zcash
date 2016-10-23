@@ -1,0 +1,10 @@
+namespace: zcash
+containers:
+  testnet:
+    image: bwstitt/zcash:latest
+    # ports:
+    # todo: what are the right ports?
+    volumes:
+     - "config/testnet.conf:/config/zcash.conf"
+     - "data/testnet:/home/zcash/.zcash"
+     - "data/zcash-params:/home/zcash/.zcash-params"
