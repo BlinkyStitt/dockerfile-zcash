@@ -8,26 +8,28 @@
 
 ```bash
 rocker-compose run
-docker exec -it zcash.node zcash-cli getinfo
 ```
+
+4. Watch the logs:
+```bash
+docker logs -f zcash.testnet
+```
+
 
 # Doing more
 
-Run commands against that container:
+Run commands against the container:
 ```bash
-docker exec -it zcash.testnet bash -l
 docker exec -it zcash.testnet free -h
 docker exec -it zcash.testnet nproc
+
 docker exec -it zcash.testnet zcash-cli help
 docker exec -it zcash.testnet zcash-cli getinfo
 docker exec -it zcash.testnet zcash-cli zcbenchmark solveequihash 10
 docker exec -it zcash.testnet zcash-cli zcbenchmark solveequihash 20
 docker exec -it zcash.testnet zcash-cli setgenerate true 1
-```
 
-Tail logs:
-```bash
-docker logs zcash.testnet -f
+docker exec -it zcash.testnet bash -l
 ```
 
 
