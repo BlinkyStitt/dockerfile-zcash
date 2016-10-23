@@ -5,10 +5,11 @@
 1. Install Docker from https://www.docker.com/
 2. Install rocker-compose from https://github.com/grammarly/rocker-compose
 3. In a terminal, run the following:
-    ```bash
-    rocker-compose run
-    docker exec -it zcash.node zcash-cli getinfo
-    ```
+
+```bash
+rocker-compose run
+docker exec -it zcash.node zcash-cli getinfo
+```
 
 # Doing more
 
