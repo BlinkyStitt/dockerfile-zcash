@@ -40,7 +40,20 @@ Also on https://hub.docker.com/r/bwstitt/zcash
     ```bash
     cp ./data/mainnet/wallet.dat /backups/somewhere/safe
     ```
+10. Start mining:
 
+    ```bash
+    # to mine on all cores (this will make your computer hot)
+    ./bin/zcash-cli setgenerate true -1
+
+    # to mine on 1 cores (this will make your computer not as hot)
+    ./bin/zcash-cli setgenerate true 1
+    ```
+10. Stop mining
+
+    ```bash
+    ./bin/zcash-cli setgenerate false
+    ```
 
 IMPORTANT! The wallet encryption feature is disabled in zcashd so be careful!
 
