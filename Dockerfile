@@ -26,11 +26,11 @@ RUN wget -qO - https://apt.z.cash/zcash.asc | apt-key add - \
 RUN mkdir -p ~/.zcash ~/.zcash-params
 VOLUME /home/zcash/.zcash /home/zcash/.zcash-params
 
-# TODO: EXPOSE what ports?
-
 ADD ./start-zcashd.sh /start-zcashd.sh
 USER zcash
 CMD ["sh", "/start-zcashd.sh"]
 
 HEALTHCHECK --interval=5m --timeout=3s \
     CMD zcash-cli getinfo || exit $?
+
+EXPOSE 8233
