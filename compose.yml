@@ -10,8 +10,8 @@ containers:
   #    - "testnet.conf:/config/zcash.conf:ro"
   mainnet:
     image: bwstitt/zcash:latest
-    # ports:
-    # TODO: what are the right ports?
+    ports:
+     - "8233:8233/tcp"
     volumes:
      - "data/mainnet:/home/zcash/.zcash"
      - "data/zcash-params:/home/zcash/.zcash-params"
