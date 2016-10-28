@@ -1,10 +1,18 @@
 namespace: zcash
 containers:
-  testnet:
+  # testnet:
+  #   image: bwstitt/zcash:latest
+  #   # ports:
+  #   # TODO: what are the right ports?
+  #   volumes:
+  #    - "data/testnet:/home/zcash/.zcash"
+  #    - "data/zcash-params:/home/zcash/.zcash-params"
+  #    - "testnet.conf:/config/zcash.conf:ro"
+  mainnet:
     image: bwstitt/zcash:latest
     # ports:
     # TODO: what are the right ports?
     volumes:
-     - "data/testnet:/home/zcash/.zcash"
+     - "data/mainnet:/home/zcash/.zcash"
      - "data/zcash-params:/home/zcash/.zcash-params"
-     - "testnet.conf:/config/zcash.conf:ro"
+     - "mainnet.conf:/config/zcash.conf:ro"

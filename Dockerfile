@@ -20,10 +20,7 @@ RUN docker-apt-install \
 # install zcash from their apt source. https://github.com/zcash/zcash/wiki/Debian-binary-packages
 RUN wget -qO - https://apt.z.cash/zcash.asc | apt-key add - \
  && echo "deb https://apt.z.cash/ jessie main" >/etc/apt/sources.list.d/zcash.list \
- && docker-apt-install \
-    libgomp1 \
-    libdigest-sha-perl \
-    zcash
+ && docker-apt-install zcash
 
 # setup data volumes
 RUN mkdir -p ~/.zcash ~/.zcash-params

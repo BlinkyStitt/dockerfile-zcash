@@ -5,31 +5,29 @@
 1. Install Docker from https://www.docker.com/
 2. Install rocker-compose from https://github.com/grammarly/rocker-compose
 3. In a terminal, run the following:
-
-```bash
-rocker-compose run
-```
-
+    ```bash
+    rocker-compose run
+    ```
 4. Watch the logs:
-```bash
-docker logs -f zcash.testnet
-```
+    ```bash
+    docker logs -f zcash.mainnet
+    ```
 
 
 # Doing more
 
 Run commands against the container:
 ```bash
-docker exec -it zcash.testnet free -h
-docker exec -it zcash.testnet nproc
+docker exec -it zcash.mainnet free -h
+docker exec -it zcash.mainnet nproc
 
-docker exec -it zcash.testnet zcash-cli help
-docker exec -it zcash.testnet zcash-cli getinfo
-docker exec -it zcash.testnet zcash-cli zcbenchmark solveequihash 10
-docker exec -it zcash.testnet zcash-cli zcbenchmark solveequihash 20
-docker exec -it zcash.testnet zcash-cli setgenerate true 1
+docker exec -it zcash.mainnet zcash-cli help
+docker exec -it zcash.mainnet zcash-cli getinfo
+docker exec -it zcash.mainnet zcash-cli zcbenchmark solveequihash 10
+docker exec -it zcash.mainnet zcash-cli zcbenchmark solveequihash 20
+docker exec -it zcash.mainnet zcash-cli setgenerate true 1
 
-docker exec -it zcash.testnet bash -l
+docker exec -it zcash.mainnet bash -l
 ```
 
 
@@ -46,3 +44,5 @@ docker build . -t bwstitt/zcash
 
  * [ ] helper to customize config
  * [ ] expose ports
+ * [ ] easily switch between mainnet and testnet and regtest
+ * [ ] use rocker-compose inside a container so that it doesn't need to be installed on the host
