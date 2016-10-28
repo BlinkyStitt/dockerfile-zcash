@@ -1,5 +1,7 @@
 # Zcash
 
+Run https://z.cash/ with just a couple commands
+
 # Quick Setup with Docker
 
 1. Install Docker from https://www.docker.com/
