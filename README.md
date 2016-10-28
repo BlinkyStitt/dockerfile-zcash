@@ -11,16 +11,25 @@
     cd dockerfile-zcash
     rocker-compose run
     ```
-4. Use zcash-cli without having to type a bunch of docker things:
 
-    ```bash
-    ./bin/zcash-cli help
-    ```
-5. Watch the logs:
+4. Watch the logs:
 
     ```bash
     docker logs -f zcash.mainnet
     ```
+5. Once the params have finished downloading and the daemon has started, using zcash-cli is easy:
+
+    ```bash
+    ./bin/zcash-cli help
+    ```
+6. Back up your wallet!
+
+    ```bash
+    cp ./data/mainnet/wallet.dat /backups/somewhere/safe
+    ```
+
+IMPORTANT! The wallet encryption feature is disabled in zcashd so be careful!
+
 
 # Doing more
 
