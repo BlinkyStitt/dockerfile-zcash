@@ -95,5 +95,7 @@ docker build . -t bwstitt/zcash
 # Authors
 
 Donations are much appreciated!
- - BTC 17vi3UfTYNRi6RnWRbhv7nXBH66c4gVYEV
- - ZEC address coming once I setup a permanent node
+
+ - Bryan Stitt 
+     - BTC 17vi3UfTYNRi6RnWRbhv7nXBH66c4gVYEV
+     - ZEC address coming once I setup a permanent node
