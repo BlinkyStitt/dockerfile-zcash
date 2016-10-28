@@ -90,3 +90,10 @@ docker build . -t bwstitt/zcash
  * [ ] expose ports
  * [ ] easily switch between mainnet and testnet and regtest
  * [ ] use rocker-compose inside a container so that it doesn't need to be installed on the host
+
+
+# Authors
+
+Donations are much appreciated!
+ - BTC 17vi3UfTYNRi6RnWRbhv7nXBH66c4gVYEV
+ - ZEC address coming once I setup a permanent node
