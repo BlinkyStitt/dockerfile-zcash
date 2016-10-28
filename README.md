@@ -13,24 +13,33 @@ Also on https://hub.docker.com/r/bwstitt/zcash
     ```bash
     git clone https://github.com/WyseNynja/dockerfile-zcash.git
     cd dockerfile-zcash
-    rocker-compose run
     ```
 
-4. Watch the logs:
+4. Edit the mainnet.conf with a more secure password and maybe enable mining.
+5. In a terminal, run the following to start zcash:
+
+    ```bash
+    rocker-compose pull
+    rocker-compose run
+    ```
+6. Watch the logs:
 
     ```bash
     docker logs -f zcash.mainnet
     ```
-5. Once the params have finished downloading and the daemon has started, using zcash-cli is easy:
+7. Once the params have finished downloading and the daemon has started, using zcash-cli is easy:
 
     ```bash
     ./bin/zcash-cli help
+    ./bin/zcash-cli getinfo
+    ./bin/zcash-cli getpeerinfo
     ```
-6. Back up your wallet!
+8. Back up your wallet!
 
     ```bash
     cp ./data/mainnet/wallet.dat /backups/somewhere/safe
     ```
+
 
 IMPORTANT! The wallet encryption feature is disabled in zcashd so be careful!
 
