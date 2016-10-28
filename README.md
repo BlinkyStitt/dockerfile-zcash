@@ -5,16 +5,19 @@
 1. Install Docker from https://www.docker.com/
 2. Install rocker-compose from https://github.com/grammarly/rocker-compose
 3. In a terminal, run the following:
+
     ```bash
     git clone https://github.com/WyseNynja/dockerfile-zcash.git
     cd dockerfile-zcash
     rocker-compose run
     ```
 4. Use zcash-cli without having to type a bunch of docker things:
+
     ```bash
     ./bin/zcash-cli help
     ```
-4. Watch the logs:
+5. Watch the logs:
+
     ```bash
     docker logs -f zcash.mainnet
     ```
