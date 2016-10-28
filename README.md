@@ -6,18 +6,25 @@
 2. Install rocker-compose from https://github.com/grammarly/rocker-compose
 3. In a terminal, run the following:
     ```bash
+    git clone https://github.com/WyseNynja/dockerfile-zcash.git
+    cd dockerfile-zcash
     rocker-compose run
+    ```
+4. Use zcash-cli without having to type a bunch of docker things:
+    ```bash
+    ./bin/zcash-cli help
     ```
 4. Watch the logs:
     ```bash
     docker logs -f zcash.mainnet
     ```
 
-
 # Doing more
 
 Run commands against the container:
 ```bash
+docker exec -it zcash.mainnet bash -l
+
 docker exec -it zcash.mainnet free -h
 docker exec -it zcash.mainnet nproc
 
@@ -26,8 +33,6 @@ docker exec -it zcash.mainnet zcash-cli getinfo
 docker exec -it zcash.mainnet zcash-cli zcbenchmark solveequihash 10
 docker exec -it zcash.mainnet zcash-cli zcbenchmark solveequihash 20
 docker exec -it zcash.mainnet zcash-cli setgenerate true 1
-
-docker exec -it zcash.mainnet bash -l
 ```
 
 
