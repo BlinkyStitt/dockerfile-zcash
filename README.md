@@ -2,6 +2,8 @@
 
 Run https://z.cash/ with just a couple commands
 
+Also on https://hub.docker.com/r/bwstitt/zcash
+
 # Quick Setup with Docker
 
 1. Install Docker from https://www.docker.com/
