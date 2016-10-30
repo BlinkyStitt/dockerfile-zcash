@@ -97,7 +97,7 @@ docker build . -t bwstitt/zcash
 
 Donations are much appreciated!
 
- - Bryan Stitt
+ - Bryan Stitt <bryan at stitthappens.com>
      - Bitcoin: 17vi3UfTYNRi6RnWRbhv7nXBH66c4gVYEV
      - Zcash: t1NEaED2QeEYckpc3WGdQrn2yPV9ujwk5gr
      - Zcash: zcGWtivu6xbzE9rdKaxFHXy9TjDsu1tw76sxGp83SCVeYn8DwRYNsWfexqhuvSWvr411V3niiwWRkCcTu8Xm2hVKhkQzFB6
