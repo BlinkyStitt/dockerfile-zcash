@@ -90,6 +90,7 @@ docker build . -t bwstitt/zcash
  * [ ] expose ports
  * [ ] easily switch between mainnet and testnet and regtest
  * [ ] use rocker-compose inside a container so that it doesn't need to be installed on the host
+ * [ ] use Tor
 
 
 # Authors
