@@ -8,8 +8,7 @@ Also on https://hub.docker.com/r/bwstitt/zcash
 
 1. Open port 8233 on your router
 2. Install Docker from https://www.docker.com/
-3. Install rocker-compose from https://github.com/grammarly/rocker-compose
-4. In a terminal, run the following:
+3. In a terminal, run the following:
 
     ```bash
     git clone https://github.com/WyseNynja/dockerfile-zcash.git
@@ -20,8 +19,7 @@ Also on https://hub.docker.com/r/bwstitt/zcash
 6. In a terminal, run the following to start zcash:
 
     ```bash
-    rocker-compose pull
-    rocker-compose run
+    ./bin/run
     ```
 7. Watch the logs:
 

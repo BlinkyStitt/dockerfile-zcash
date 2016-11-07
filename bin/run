@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# exit on error
+set -e
+
+# run from inside the application's HOME directory
+DIR="$(cd "$(dirname "$0")" && pwd -P)"
+cd "$DIR/.."
+pwd
+
+echo "Updating images..."
+rocker-compose pull
+
+echo "Running containers..."
+rocker-compose run "$@"
