@@ -28,7 +28,7 @@ VOLUME /home/zcash/.zcash /home/zcash/.zcash-params
 
 ADD ./start-zcashd.sh /start-zcashd.sh
 USER zcash
-CMD ["sh", "/start-zcashd.sh"]
+CMD ["/bin/sh", "/start-zcashd.sh"]
 
 HEALTHCHECK --interval=5m --timeout=3s \
     CMD zcash-cli getinfo || exit 1
