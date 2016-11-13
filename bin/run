@@ -9,7 +9,8 @@ cd "$DIR/.."
 pwd
 
 echo "Updating images..."
-rocker-compose pull
+docker pull bwstitt/rocker-compose:latest
+./bin/rocker-compose pull
 
 echo "Running containers..."
-rocker-compose run "$@"
+./bin/rocker-compose run "$@"

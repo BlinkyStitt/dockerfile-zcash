@@ -2,6 +2,7 @@
 # Run rocker-compose inside a container
 exec docker run -it --rm \
     -v /var/run/docker.sock:/var/run/docker.sock \
-    -v "$(pwd):/target" \
+    -e "TARGET=$(pwd)" \
+    -v $(pwd):$(pwd) \
     bwstitt/rocker-compose \
     "$@"
