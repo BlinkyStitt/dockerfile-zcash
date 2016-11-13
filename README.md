@@ -32,6 +32,7 @@ Also on https://hub.docker.com/r/bwstitt/zcash
     ./bin/zcash-cli help
     ./bin/zcash-cli getinfo
     ./bin/zcash-cli getpeerinfo
+    ./bin/zcash-list-addresses
     ```
 9. Back up your wallet!
 
