@@ -1,4 +1,7 @@
 #!/bin/sh
+# setup config, fetch params, and start the zcash daemon
+#
+# this runs from inside the container. don't run this on the host
 
 # mounting the config inside another mount did weird things
 cp /config/zcash.conf ~/.zcash/
