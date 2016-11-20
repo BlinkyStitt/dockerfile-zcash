@@ -26,7 +26,7 @@ RUN wget -qO - https://apt.z.cash/zcash.asc | apt-key add - \
 RUN mkdir -p ~/.zcash ~/.zcash-params
 VOLUME /home/zcash/.zcash /home/zcash/.zcash-params
 
-ADD ./start-zcashd.sh /start-zcashd.sh
+COPY ./start-zcashd.sh /
 USER zcash
 CMD ["/bin/sh", "/start-zcashd.sh"]
 

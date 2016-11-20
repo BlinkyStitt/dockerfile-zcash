@@ -2,7 +2,18 @@
 
 Run https://z.cash/ with just a couple commands.
 
-For a more complete setup, check out https://github.com/WyseNynja/zcash-suite/
+For a complete setup, check out https://github.com/WyseNynja/zcash-suite/
+
+If you already setup a node with this repo and rocker-compose, run these commands to migrate:
+
+```bash
+export ZCASH_HOME=~/zcash-suite
+
+docker rm -f zcash.mainnet
+mkdir -p "$ZCASH_HOME"
+mv ./data ~/zcash-suite/data
+```
+
 
 # Todo
 

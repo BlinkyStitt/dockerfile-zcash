@@ -1,3 +1,0 @@
-#!/bin/sh
-# TODO: allow picking mainnet/regtest/testnet
-exec docker exec -it zcash.mainnet zcash-cli "$@"
