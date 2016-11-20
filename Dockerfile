@@ -23,14 +23,14 @@ RUN wget -qO - https://apt.z.cash/zcash.asc | apt-key add - \
  && docker-apt-install zcash
 
 # setup data volumes
+USER zcash
 RUN mkdir -p ~/.zcash ~/.zcash-params
 VOLUME /home/zcash/.zcash /home/zcash/.zcash-params
-
-COPY ./start-zcashd.sh /
-USER zcash
 CMD ["/bin/sh", "/start-zcashd.sh"]
 
 HEALTHCHECK --interval=5m --timeout=3s \
     CMD zcash-cli getinfo || exit 1
 
 EXPOSE 8233
+
+COPY ./start-zcashd.sh /
