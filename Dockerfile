@@ -3,7 +3,7 @@
 #
 
 # todo: use alpine linux to keep our images smaller
-FROM bwstitt/library-debian:jessie
+FROM bwstitt/debian:jessie
 
 # create user
 RUN useradd -ms /bin/bash zcash
