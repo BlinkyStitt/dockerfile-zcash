@@ -5,11 +5,10 @@
 # todo: use alpine linux to keep our images smaller
 FROM bwstitt/debian:jessie
 
-# create user
-RUN useradd -ms /bin/bash zcash
-ENV HOME=/home/zcash
-ENV PATH="/home/zcash/bin:${PATH}"
-WORKDIR /home/zcash
+EXPOSE 8233
+
+HEALTHCHECK --interval=5m --timeout=3s \
+    CMD zcash-cli getinfo || exit 1
 
 # install deps
 RUN docker-apt-install \
@@ -22,15 +21,15 @@ RUN wget -qO - https://apt.z.cash/zcash.asc | apt-key add - \
  && echo "deb https://apt.z.cash/ jessie main" >/etc/apt/sources.list.d/zcash.list \
  && docker-apt-install zcash
 
+# Use the default user that comes with the image
+ENV HOME=/home/abc
+ENV PATH="/home/abc/bin:${PATH}"
+WORKDIR /home/abc
+USER abc
+
 # setup data volumes
-USER zcash
 RUN mkdir -p ~/.zcash ~/.zcash-params
-VOLUME /home/zcash/.zcash /home/zcash/.zcash-params
-CMD ["/bin/sh", "/start-zcashd.sh"]
-
-HEALTHCHECK --interval=5m --timeout=3s \
-    CMD zcash-cli getinfo || exit 1
-
-EXPOSE 8233
+VOLUME /home/abc/.zcash /home/abc/.zcash-params
+CMD ["/start-zcashd.sh"]
 
 COPY ./start-zcashd.sh /
