@@ -19,7 +19,7 @@ RUN docker-apt-install \
 # install zcash from their apt source. https://github.com/zcash/zcash/wiki/Debian-binary-packages
 RUN wget -qO - https://apt.z.cash/zcash.asc | apt-key add - \
  && echo "deb https://apt.z.cash/ jessie main" >/etc/apt/sources.list.d/zcash.list \
- && docker-apt-install zcash
+ && docker-apt-install zcash=1.0.10+1
 
 # Use the default user that comes with the image
 ENV HOME=/home/abc
