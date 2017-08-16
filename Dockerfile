@@ -19,17 +19,18 @@ RUN docker-apt-install \
 # install zcash from their apt source. https://github.com/zcash/zcash/wiki/Debian-binary-packages
 RUN wget -qO - https://apt.z.cash/zcash.asc | apt-key add - \
  && echo "deb https://apt.z.cash/ jessie main" >/etc/apt/sources.list.d/zcash.list \
- && docker-apt-install zcash=1.0.10+1
+ && docker-apt-install zcash=1.0.11
 
 # Use the default user that comes with the image
 ENV HOME=/home/abc
-ENV PATH="/home/abc/bin:${PATH}"
 WORKDIR /home/abc
 USER abc
 
-# setup data volumes
+# setup data volumes as the abc user
 RUN mkdir -p ~/.zcash ~/.zcash-params
 VOLUME /home/abc/.zcash /home/abc/.zcash-params
-CMD ["/start-zcashd.sh"]
 
-COPY ./start-zcashd.sh /
+ENTRYPOINT ["/entrypoint.sh"]
+CMD ["zcashd"]
+
+COPY ./entrypoint.sh /
