@@ -43,7 +43,7 @@ if [ "$1" = 'zcashd' ]; then
     # TODO: lock to make sure multiple containers aren't fetching at the same time?
     zcash-fetch-params || exit 1
 
-    exec "$@"
+    exec "$@" -printtoconsole
 fi
 
 # otherwise, don't get in their way
